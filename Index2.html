@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dunia Teknologi 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a0a0a;
+      color: #f5d76e;
+      transition: background 0.5s ease;
+    }
+
+    .page {
+      display: none;
+      text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      transition: opacity 0.6s ease;
+    }
+
+    .page.active {
+      display: block;
+      opacity: 1;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    button {
+      margin-top: 20px;
+      background: none;
+      border: 2px solid #f5d76e;
+      color: #f5d76e;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #f5d76e;
+      color: #111;
+    }
+
+    h1, h2 {
+      color: #f5d76e;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #ccc;
+      line-height: 1.8;
+      text-align: justify;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    #page3 {
+      text-align: left;
+      overflow-y: auto;
+      height: 100vh;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #444;
+      color: #777;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+    
+</style>
+</head>
+<body>
+
+  <!-- Halaman 1 -->
+  <div class="page active" id="page1">
+    <h1>Selamat Datang di Dunia Teknologi</h1>
+    <button onclick="nextPage(2)">Eksplor</button>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div class="page" id="page2">
+    <h2>pengertian</h2>
+    <p>
+      Teknologi adalah ilmu pengetahuan yang mempelajari keterampilan dalam menciptakan alat, sistem, dan metode untuk memecahkan masalah atau mempermudah pekerjaan manusia, yang mencakup penerapan ilmu pengetahuan untuk tujuan praktis..
+    </p>
+    <button onclick="nextPage(3)">Buka Lembaran</button>
+  </div>
+
+  <!-- Halaman 3 -->
+  <div class="page" id="page3">
+    <h2>Bab 1 - Jenis Teknologi</h2>
+    <p>
+      Jenis teknologi sangat beragam, tetapi dapat dikategorikan berdasarkan bidangnya seperti teknologi komunikasi, informasi, dan transportasi, atau berdasarkan fungsinya seperti teknologi medis, energi, manufaktur, dan konstruksi. Beberapa jenis teknologi modern yang menonjol antara lain kecerdasan buatan (AI), Internet of Things (IoT), dan realitas virtual (VR).
+    </p>
+
+    <h2>Bab 2 - Perkembangan saat ini</h2>
+    <p>
+      Dalam Perkembangan teknologi saat ini sangat pesat, ditandai dengan kemajuan di bidang kecerdasan buatan (AI), Internet of Things (IoT), 5G, dan kendaraan otonom. Teknologi ini secara fundamental mengubah cara hidup manusia, mulai dari komunikasi yang instan melalui media sosial hingga kemudahan belanja online (e-commerce) dan kemajuan sektor kesehatan serta pendidikan. Selain itu, fokus masa depan juga mengarah pada komputasi kuantum dan eksplorasi ruang angkasa, serta inovasi teknologi hijau untuk keberlanjutan. 
+    </p>
+
+    <h2>Bab 3 - Bidang utama perkembangan teknologi saat ini</h2>
+    <p>
+1. Kecerdasan Buatan (AI): AI diterapkan di berbagai sektor seperti kesehatan, transportasi, dan keuangan, dengan potensi untuk menjadi jauh lebih canggih dalam beberapa tahun ke depan. 
+    <p>
+      2. Internet of Things (IoT): Jaringan perangkat yang saling terhubung, menciptakan smart home dan smart city, namun juga menimbulkan tantangan keamanan data dan privasi. 
+    <p>
+      3. Teknologi 5G: Mempercepat komunikasi data secara signifikan di banyak kota, yang mendorong peningkatan penggunaan data dan layanan cloud. 
+    <p>
+      4. Kendaraan Otonom: Mulai membawa revolusi pada industri transportasi. 
+    <p>
+      5. Komputasi Kuantum: Menjanjikan kecepatan dan efisiensi yang jauh melampaui komputer tradisional. 
+    <p>
+      6. Teknologi Kesehatan: Bergeser ke arah preventif, didukung AI untuk meningkatkan kesadaran akan nutrisi.
+    <p>
+      7. E-commerce dan Ekonomi Digital: Merupakan bukti pesatnya perkembangan era digital, mendukung peningkatan roda perekonomian dengan kemudahan belanja online.
+    <p>
+      8. Infrastruktur Digital: Pengguna internet di Indonesia terus meningkat, dengan penetrasi jaringan 5G yang terus berkembang. 
+    </p>
+
+    <footer>© 2025 Project digital | Desain oleh Wulandari🌙</footer>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    function nextPage(page) {
+      document.getElementById(`page${currentPage}`).classList.remove('active');
+      document.getElementById(`page${page}`).classList.add('active');
+      currentPage = page;
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+
+
+</body>
+</html>
